@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  form {
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  input[type="date"],
+  input[type="text"],
+  input[type="submit"],
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+  button:hover {
+    background-color: #d32f2f;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Event Registration Form</h2>
+
+  <form method="post" action="http://localhost:8080/event.jsp">
+    <label for="eventDate">Event Date:</label>
+    <input type="date" id="eventDate" name="eventDate" required>
+    
+    <label for="eventName">Event Name:</label>
+    <input type="text" id="eventName" name="eventName" required>
+    
+    <label for="eventVenue">Event Venue:</label>
+    <input type="text" id="eventVenue" name="eventVenue" required>
+    
+    <label for="eventTime">Event Time:</label>
+    <input type="text" id="eventTime" name="eventTime" placeholder="HH:MM AM/PM" required>
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
